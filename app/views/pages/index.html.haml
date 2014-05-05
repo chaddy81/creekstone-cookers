@@ -1,0 +1,24 @@
+.row
+  .col-xs-12.col-md-3
+    .panel-group#accordion
+      .panel.panel-default
+        .panel-heading
+          %h4.panel-title
+            %a{'data-toggle' => "collapse", 'data-parent' => "#accordion", href: "#collapseOne"} Pages
+        .panel-collapse.collapse.in#collapseOne
+          .panel-body
+            - @pages.each do |page|
+              .page-title= link_to page.title, edit_page_path(page)
+
+            .page-title= link_to "New Page...", new_page_path
+
+      .panel.panel-default
+        .panel-heading
+          %h4.panel-title
+            %a{'data-toggle' => "collapse", 'data-parent' => "#accordion", href: "#collapseTwo"} Events
+        .panel-collapse.collapse#collapseTwo
+          .panel-body
+            Events Coming Soon
+
+  .col-xs-12.col-md-9
+    #page-content

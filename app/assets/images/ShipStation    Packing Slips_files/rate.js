@@ -1,0 +1,1 @@
+Ext.define("Rate",{extend:"Ext.data.Model",idProperty:"ServiceID",fields:["CarrierID","ShippingServiceID","Amount","Name","DeliverDays","Provider"],proxy:{type:"ajax",url:SS.url.app+"orders/getrates",actionMethods:{read:"POST"},reader:{type:"json",root:"rates"}}})

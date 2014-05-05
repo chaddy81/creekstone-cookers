@@ -7,6 +7,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
+# require "minitest/autorun"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -15,6 +16,7 @@ Bundler.require(*Rails.groups)
 
 module Creekstone
   class Application < Rails::Application
+    config.secret_key_base = '81acb72fc2ec16b92c432775c389ef7a2974078d3542bd0ae688ffbd64043bf1b786c85ec4cad25c6dae2c1f0b17460988bdc3839e9f1be7a6450bdbfd9fe0c7'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -26,5 +28,6 @@ module Creekstone
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end
