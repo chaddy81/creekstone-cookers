@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505053715) do
+ActiveRecord::Schema.define(version: 20140511194359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,9 @@ ActiveRecord::Schema.define(version: 20140505053715) do
     t.text     "content"
     t.boolean  "is_home_page", default: false
     t.integer  "order"
+    t.string   "ancestry"
   end
+
+  add_index "pages", ["ancestry"], name: "index_pages_on_ancestry", using: :btree
 
 end

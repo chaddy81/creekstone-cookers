@@ -8,8 +8,12 @@
 #  title        :string(255)
 #  content      :text
 #  is_home_page :boolean          default(FALSE)
+#  order        :integer
+#  ancestry     :string(255)
 #
 
 class Page < ActiveRecord::Base
+  has_ancestry
+
   validates :title, presence: true
 end

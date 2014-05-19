@@ -28,6 +28,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    ancestry (2.1.0)
+      activerecord (>= 3.0.0)
     annotate (2.6.3)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
@@ -184,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ancestry
   annotate (>= 2.6.0)
   capybara
   carrierwave

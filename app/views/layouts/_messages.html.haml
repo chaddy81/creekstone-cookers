@@ -1,5 +1,6 @@
 - flash.each do |type, message|
-  %div.alert.fade.in{ "data-alert" => "alert", :class => twitterized_type(type) }
+  = full_title("Home")
+  %div.alert.fade.in{ "data-alert" => "alert", class: "#{twitterized_type(type)}" }
     %button.close{ type: "button", "data-dismiss" => "alert", "aria-hidden" => "true"} &times;
     %p
       = message

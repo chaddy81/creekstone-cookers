@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'ancestry'
 
 gem 'annotate', ">=2.6.0"
 

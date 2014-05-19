@@ -1,0 +1,11 @@
+%h2 Create A New Page
+
+= simple_form_for @page, :url => url_for(:action => 'create', :controller => 'pages'), html: { role: 'form' } do |f|
+  .form-group
+    = f.input :title, placeholder: 'Page Title', input_html: { style: 'width: 100%' }
+    = f.input :content, :as => :ckeditor, input_html: { :ckeditor => {:toolbar => 'Full'} }
+
+    = f.label :parent_id
+    = f.collection_select :parent_id, Page.order(:title), :id, :title, include_blank: true
+
+    = f.submit

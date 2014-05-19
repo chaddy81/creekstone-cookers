@@ -8,6 +8,8 @@
 #  title        :string(255)
 #  content      :text
 #  is_home_page :boolean          default(FALSE)
+#  order        :integer
+#  ancestry     :string(255)
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl

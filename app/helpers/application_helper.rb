@@ -11,19 +11,19 @@ module ApplicationHelper
   def twitterized_type(type)
     case type
       when :alert
-        "alert-block"
+        puts "alert-block"
       when :error
-        "alert-error"
-      when :notice
-        "alert-info"
+        puts "alert-error"
+      when "notice"
+        puts "alert-info"
       when :success
-        "alert-success"
+        puts "alert-success"
       else
         type.to_s
     end
   end
 
-  def test_nav
-    puts "Test"
+  def root_navigation
+    roots = Page.roots
   end
 end

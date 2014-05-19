@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-  layout 'admin', only: [:index, :new]
 
   def index
     @pages = Page.all
