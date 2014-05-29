@@ -5,3 +5,7 @@ $ ->
   $('.panel-body .page-title a').click (e)->
     e.preventDefault()
     $("#page-content").load $(this).attr('href')
+
+  $('.page-new a').click (e)->
+    e.preventDefault()
+    $("#page-content").load $(this).attr('href')

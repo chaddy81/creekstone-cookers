@@ -24,6 +24,6 @@ module ApplicationHelper
   end
 
   def root_navigation
-    roots = Page.roots
+    roots = Page.roots.order("position")
   end
 end

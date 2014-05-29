@@ -11,7 +11,9 @@
               .page-title= link_to page.title, edit_page_path(page)
               %ul
               - page.children.each do |child|
-                %li=link_to child.title, edit_page_path(child)
+                %li
+                  %span.handle [drag]
+                  =link_to child.title, edit_page_path(child)
 
 
             .page-title= link_to "New Page...", new_page_path

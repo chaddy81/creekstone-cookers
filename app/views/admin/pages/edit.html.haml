@@ -3,7 +3,7 @@
 %h5= link_to 'View Page', page_path(@page)
 %h5= link_to 'Delete Page', admin_page_path(@page), method: 'delete'
 
-= simple_form_for @page, html: { role: 'form' } do |f|
+= simple_form_for @page, :url => url_for(:action => 'update', :controller => 'pages'), html: { role: 'form' } do |f|
   .form-group
     = f.input :title, placeholder: 'Page Title', input_html: { style: 'width: 100%' }
     = f.input :content, :as => :ckeditor, input_html: { :ckeditor => {:toolbar => 'Full'} }
