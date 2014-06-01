@@ -21,8 +21,7 @@ gem 'mini_magick'
 gem 'ancestry'
 
 gem 'annotate', ">=2.6.0"
-
-
+gem 'rails_12factor'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
