@@ -28,6 +28,9 @@ module Creekstone
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.assets.enabled = true
+    config.assets.precompile += Ckeditor.assets
+    config.assets.precompile += ['*ckeditor/skins/moono/icons.png']
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end
