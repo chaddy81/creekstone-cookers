@@ -34,6 +34,9 @@ GEM
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -195,6 +198,7 @@ PLATFORMS
 DEPENDENCIES
   ancestry
   annotate (>= 2.6.0)
+  bourbon
   capybara
   carrierwave
   ckeditor

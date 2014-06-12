@@ -9,12 +9,9 @@
 
   %body
 
-    .container
-      = render 'layouts/messages'
+    = render 'layouts/navigation'
+    = render 'layouts/messages'
 
-      .row
-        = render 'layouts/navigation'
+    = yield
 
-      .row
-        .col-xs-12.col-md-12
-          = yield
+    = render 'layouts/footer'

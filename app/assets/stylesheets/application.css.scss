@@ -12,7 +12,8 @@
  *
  *= require bootstrap.min
  *= require jquery.ui.all
- *= require_tree .
+ *= require admin
+ *= require styles
  *= require_self
  */
 

@@ -1,0 +1,87 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.navbar {
+  background: none;
+  border: none;
+  margin: 0;
+}
+
+.navbar-toggle {
+  margin-top: 30px;
+}
+
+.handle {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 200;
+  vertical-align: top;
+}
+
+.page-title {
+  margin-bottom: 5px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.header {
+  .nav {
+    li {
+      position: relative;
+    }
+  }
+}
+
+.navbar-nav {
+  li {
+    &:hover {
+      .submenu {
+        display: block;
+      }
+    }
+  }
+}
+
+.submenu {
+  background: #fff;
+  display: none;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px 10px;
+  position: absolute;
+  width: 140px;
+  z-index: 1000;
+}
+
+.home-banner {
+  background: image-url('AGA_oven.jpg') top left no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 645px;
+  position: relative;
+  width: 100%;
+
+  h1 {
+    font-family: 'OpenSans';
+    font-size: 55px;
+    font-weight: 600;
+    left: 50px;
+    position: absolute;
+    top: 135px;
+  }
+
+  h2 {
+    font-family: 'OpenSans';
+    font-size: 45px;
+    font-weight: 600;
+    left: 50px;
+    position: absolute;
+    top: 195px;
+  }
+}

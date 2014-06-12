@@ -1,0 +1,13 @@
+/*==========  Global Styles  ==========*/
+@import "bourbon";
+@import "global/mixins";
+@import "global/fonts";
+
+/*==========  Layout Styles  ==========*/
+
+@import "layout/header";
+@import "layout/footer";
+
+/*==========  Pages Styles  ==========*/
+
+@import "pages";

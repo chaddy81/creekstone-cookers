@@ -1,0 +1,3 @@
+@include font-face(OpenSans, 'opensans-light-webfont', 200, $asset-pipeline: true);
+@include font-face(OpenSans, 'opensans-regular-webfont', normal, $asset-pipeline: true);
+@include font-face(OpenSans, 'opensans-semibold-webfont', 600, $asset-pipeline: true);

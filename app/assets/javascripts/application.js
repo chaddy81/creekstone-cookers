@@ -17,4 +17,5 @@
 //= require ckeditor/override
 //= require ckeditor/init
 //= require turbolinks
+//= require pages
 //= require_tree .
