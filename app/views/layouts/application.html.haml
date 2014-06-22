@@ -12,6 +12,10 @@
     = render 'layouts/navigation'
     = render 'layouts/messages'
 
-    = yield
+    - unless params[:action] == "home"
+      .container
+        = yield
+    - else
+      = yield
 
     = render 'layouts/footer'

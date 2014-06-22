@@ -45,16 +45,56 @@
   }
 }
 
+.navbar-default {
+  .navbar-nav > li > a {
+    color: #777;
+
+    &:hover {
+      color: #777;
+    }
+  }
+}
+.caret {
+  color: #777;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  position: absolute;
+  top: 23px;
+  right: 0px;
+}
+
 .submenu {
-  background: #fff;
+  background: #777;
   display: none;
   left: 0;
   list-style-type: none;
   margin: 0;
-  padding: 0 10px 10px;
+  padding: 0;
   position: absolute;
-  width: 140px;
+  width: 200px;
   z-index: 1000;
+
+  li {
+    background: #777;
+    border-bottom: 1px solid #353535;
+    padding: 8px 15px;
+    width: 100%;
+
+    a {
+      color: #cececd;
+      font-weight: normal;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
 }
 
 .home-banner {
