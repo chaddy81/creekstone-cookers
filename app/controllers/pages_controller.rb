@@ -24,6 +24,9 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
+    if request.path != page_path(@page)
+      redirect_to @page, status: :moved_permanently
+    end
   end
 
   def update

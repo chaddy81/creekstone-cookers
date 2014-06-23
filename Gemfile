@@ -38,3 +38,4 @@ end
 
 gem 'spring', group: :development
 gem 'puma'
+gem 'friendly_id'
