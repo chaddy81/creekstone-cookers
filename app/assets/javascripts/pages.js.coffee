@@ -9,3 +9,6 @@ $ ->
   $('.page-new a').click (e)->
     e.preventDefault()
     $("#page-content").load $(this).attr('href')
+
+  $('.menu').on 'click', ->
+    $('.navbar-nav').toggleClass('open')

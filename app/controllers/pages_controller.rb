@@ -23,7 +23,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find(params[:id])
+    @page = Page.friendly.find(params[:id])
     if request.path != page_path(@page)
       redirect_to @page, status: :moved_permanently
     end
