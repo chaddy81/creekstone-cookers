@@ -1,3 +1,20 @@
 @include font-face(OpenSans, 'opensans-light-webfont', 200, $asset-pipeline: true);
 @include font-face(OpenSans, 'opensans-regular-webfont', normal, $asset-pipeline: true);
 @include font-face(OpenSans, 'opensans-semibold-webfont', 600, $asset-pipeline: true);
+
+@include font-face(Cantarell, 'cantarell-regular-webfont', 400, normal, $asset-pipeline: true);
+@include font-face(Cantarell, 'cantarell-bold-webfont', 700, normal, $asset-pipeline: true);
+@include font-face(Cantarell, 'cantarell-oblique-webfont', 400, italic, $asset-pipeline: true);
+@include font-face(Cantarell, 'cantarell-boldoblique-webfont', 700, italic, $asset-pipeline: true);
+
+
+@include font-face(Fjalla, 'fjallaone-regular-webfont', 200, $asset-pipeline: true);
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Fjalla';
+}
+
+body {
+  font: normal 15px/normal 'Cantarell';
+  font-style: normal;
+}

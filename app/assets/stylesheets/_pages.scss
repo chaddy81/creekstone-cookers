@@ -13,6 +13,16 @@
   margin-top: 30px;
 }
 
+.navbar-brand {
+  background: image-url('logo.png') no-repeat top left;
+  background-size: 150px 50px;
+  display: inline-block;
+  height: 55px;
+  margin: 15px 25px 15px 0;
+  text-indent: -9999px;
+  width: 150px;
+}
+
 .handle {
   color: #ccc;
   cursor: pointer;
