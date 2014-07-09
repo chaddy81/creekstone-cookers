@@ -16,7 +16,7 @@
   -o-background-size: cover;
   background-size: cover;
   height: 645px;
-  margin: 0 0 25px;
+  margin: -35px 0 25px;
   position: relative;
   width: 100%;
 
@@ -39,10 +39,31 @@
 
 .nav-tabs {
   margin-top: 35px;
+  li {
+    a {
+      color: #999;
+    }
+
+    &.active {
+      a {
+        color: #353535;
+      }
+    }
+  }
 }
 
 .tab-content {
-  padding: 20px;
+  padding: 20px 0;
+}
+
+.table {
+  tbody, tr, td {
+    border: none !important;
+  }
+}
+
+.italic {
+  font-style: italic;
 }
 
 @media (max-width: 992px) {
