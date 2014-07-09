@@ -25,4 +25,4 @@ $ ->
     imageName = lastClass.split('-').pop()
     folder = $(this).parent().attr('class').split(' ')[0]
 
-    $('.image-container img').attr('src', '/assets/' + folder + '/4-oven-30-amp-aga_-' + imageName + '.png')
+    $('.image-container img').attr('src', "#{Rails.root}/assets/" + folder + '/4-oven-30-amp-aga_-' + imageName + '.png')
