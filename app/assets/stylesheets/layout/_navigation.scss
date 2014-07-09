@@ -1,0 +1,155 @@
+.navbar {
+  background: none;
+  border: none;
+  margin: 0;
+}
+
+.navbar-toggle {
+  margin-top: 30px;
+}
+
+.navbar-brand {
+  background: image-url('logo.png') no-repeat top left;
+  background-size: 150px 50px;
+  display: inline-block;
+  height: 55px;
+  margin: 15px 25px 15px 0;
+  text-indent: -9999px;
+  width: 150px;
+}
+
+.handle {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 200;
+  vertical-align: top;
+}
+
+.navbar-nav {
+  background: #86A7CA;
+  height: 100%;
+  left: -200px;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  width: 200px;
+  z-index: 10000;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &.open {
+    left: 0;
+  }
+
+  li {
+    display: block;
+    float: none;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        background: #7595b8;
+      }
+    }
+
+    &:hover {
+      .submenu {
+        height: auto;
+        max-height: 200px;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.menu {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 25px;
+
+  .button {
+    border: 2px solid #777;
+    display: inline-block;
+    float: left;
+
+    .icon-bar {
+      background: #777;
+      display: block;
+      height: 3px;
+      margin: 5px;
+      width: 25px;
+    }
+  }
+  p {
+    color: #777;
+    float: left;
+    font-size: 22px;
+    margin-left: 10px;
+  }
+}
+
+.navbar-default {
+  .navbar-nav > li > a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.caret {
+  color: #fff;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  position: absolute;
+  top: 23px;
+  right: 15px;
+}
+
+.submenu {
+  background: #777;
+  display: block;
+  height: 0;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  visibility: hidden;
+  width: 200px;
+  z-index: 1000;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  li {
+    background: #777;
+    border-bottom: 1px solid #353535;
+    padding: 15px;
+    width: 100%;
+
+    a {
+      background: #777 !important;
+      color: #cececd;
+      font-weight: normal;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

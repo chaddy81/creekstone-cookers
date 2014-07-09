@@ -1,0 +1,70 @@
+.image-container {
+  margin-top: 20px;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+[class^='four_oven'] {
+  margin-bottom: 35px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.color-chip {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+
+  &.four-oven-black {
+    background: #000;
+  }
+
+  &.four-oven-heather {
+    background: #9886A0;
+  }
+
+  &.four-oven-pistachio {
+    background: #99CEC4;
+  }
+
+  &.four-oven-aubergine {
+    background: #612561;
+  }
+
+  &.four-oven-green {
+    background: #376630;
+  }
+
+  &.four-oven-cream {
+    background: #FFF6D5;
+  }
+
+  &.four-oven-darkblue {
+    background: #2E3375;
+  }
+
+  &.four-oven-pewter {
+    background: #50505A;
+  }
+
+  &.four-oven-white {
+    background: #F8F8F8;
+  }
+
+  &.four-oven-claret {
+    background: #AE1E27;
+  }
+
+  &.four-oven-ashes {
+    background: #E0DEE3;
+  }
+
+  &.four-oven-duckegg {
+    background: #B9CEE1;
+  }
+
+}

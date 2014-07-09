@@ -16,15 +16,13 @@
 
             %p Menu
 
-
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse{style: 'margin-top: 15px'}
-          %ul.nav.navbar-nav.navbar-right
-            %li= link_to 'Home', root_url
-            - root_navigation.each do |root|
-              %li.dropdown
-                = link_to root.title, page_path(root)
-                - if root.children.exists?
-                  %span.caret
-                  %ul.submenu
-                    - root.children.each do |child|
-                      %li= link_to child.title, page_path(child)
+    %ul.nav.navbar-nav.navbar-right
+      %li= link_to 'Home', root_url
+      - root_navigation.each do |root|
+        %li.dropdown
+          = link_to root.title, page_path(root)
+          - if root.children.exists?
+            %span.caret
+            %ul.submenu
+              - root.children.each do |child|
+                %li= link_to child.title, page_path(child)

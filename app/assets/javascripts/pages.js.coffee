@@ -12,3 +12,12 @@ $ ->
 
   $('.menu').on 'click', ->
     $('.navbar-nav').toggleClass('open')
+
+  $('[class^="four_oven"] .color-chip').on 'click', (e) ->
+    lastClass = $(this).attr('class').split(' ').pop()
+    imageName = lastClass.split('-').pop()
+    folder = $(this).parent().attr('class').split(' ')[0]
+
+    console.log folder
+
+    $('.image-container img').attr('src', '/assets/' + folder + '/4oven_cont_' + imageName + '.jpg')

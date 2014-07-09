@@ -11,7 +11,7 @@ class Admin::PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.friendly.find(params[:id])
     render layout: false
   end
 
@@ -31,13 +31,13 @@ class Admin::PagesController < ApplicationController
 
   def sort
     params[:page][:position].each_with_index do |id, index|
-      Page.find(id).update_attributes(position: index)
+      Page.friendly.find(id).update_attributes(position: index)
     end
     render nothing: true
   end
 
   def update
-    page = Page.find(params[:id])
+    page = Page.friendly.find(params[:id])
     page.update!(pages_params)
     redirect_to page_path(page)
   end
