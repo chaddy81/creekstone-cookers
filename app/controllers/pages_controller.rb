@@ -43,6 +43,11 @@ class PagesController < ApplicationController
     @page = Page.where(title: 'Home').last
   end
 
+  def update_image
+    @image = params[:image]
+    @type = params[:type]
+  end
+
   private
 
   def pages_params

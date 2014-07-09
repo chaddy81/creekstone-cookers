@@ -17,12 +17,18 @@ $ ->
     lastClass = $(this).attr('class').split(' ').pop()
     imageName = lastClass.split('-').pop()
     folder = $(this).parent().attr('class').split(' ')[0]
-
-    $('.image-container img').attr('src', '/assets/' + folder + '/4oven_cont_' + imageName + '.jpg')
+    image = folder + '/4oven_cont_' + imageName + '.jpg'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'
 
   $('.four_oven_electric .color-chip').on 'click', (e) ->
     lastClass = $(this).attr('class').split(' ').pop()
     imageName = lastClass.split('-').pop()
     folder = $(this).parent().attr('class').split(' ')[0]
-
-    $('.image-container img').attr('src', "#{Rails.root}/assets/" + folder + '/4-oven-30-amp-aga_-' + imageName + '.png')
+    image = folder + '/4-oven-30-amp-aga_-' + imageName + '.png'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'

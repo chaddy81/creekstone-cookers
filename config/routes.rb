@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/pages/two_oven_cooker_electric', to: 'pages#two_oven_cooker_electric', as: 'two_oven_electric'
   get '/pages/aga_companion', to: 'pages#aga_companion', as: 'aga_companion'
 
+  post '/pages/update_image'
+
   resources :pages
 
   namespace :admin do
