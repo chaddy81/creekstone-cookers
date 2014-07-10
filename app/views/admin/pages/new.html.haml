@@ -8,4 +8,6 @@
     = f.label :parent_id
     = f.collection_select :parent_id, Page.order(:title), :id, :title, include_blank: true
 
+    = f.input :nav_location, collection: Page::NAV_LOCATIONS, include_blank: true
+
     = f.submit

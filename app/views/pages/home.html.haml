@@ -1,13 +1,24 @@
 .home-banner
-  %h1 Consider Adding Heading
-  %h2 and sub-heading
+  .heading-cta
+    %h1 Total Control Range Cooker
+    %h2 simply a better way to cook
+    .btn.btn-default View Models
 
 .container
   .row
-    %p Welcome to the Creekstone Cookers Web site! Creekstone Cookers is the southeast's premiere dealer of Aga ranges, cookware, and related products. In our site, you'll find information about our company, upcoming events sponsored by Creekstone Cookers, and information about the products we carry as well as the advantages of owning an Aga range.
+    .col-md-4
+      = image_tag '3-oven-aga_black_fe-roomset.jpg', class: 'img-responsive'
+      %h4 Total Control
+      = link_to 'View Models', '/pages/total-control'
+    .col-md-4
+      = image_tag '3-oven_aga-roomset.jpg', class: 'img-responsive'
+      %h4 Traditional
+      = link_to 'View Models', '/pages/traditional'
+    .col-md-4
+      %p Welcome to the Creekstone Cookers Web site! Creekstone Cookers is the southeast's premiere dealer of Aga ranges, cookware, and related products. In our site, you'll find information about our company, upcoming events sponsored by Creekstone Cookers, and information about the products we carry as well as the advantages of owning an Aga range.
 
-    %p We, at Creekstone Cookers, appreciate your interest in Aga and value your business. Therefore we will strive to make this a most enjoyable an rewarding experience and exceed your expectations. We look forward to welcoming you into the Aga family.
+      %p We, at Creekstone Cookers, appreciate your interest in Aga and value your business. Therefore we will strive to make this a most enjoyable an rewarding experience and exceed your expectations. We look forward to welcoming you into the Aga family.
 
-    %p Take an Aga for a test drive and find out why serious cooks can't live without their Aga radiant cooker!
+      %p Take an Aga for a test drive and find out why serious cooks can't live without their Aga radiant cooker!
 
-    %p Please contact us to schedule an appointment.
+      %p Please contact us to schedule an appointment.

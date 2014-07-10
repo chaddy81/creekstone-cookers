@@ -24,6 +24,10 @@ module ApplicationHelper
   end
 
   def root_navigation
-    roots = Page.roots.order("position")
+    roots = Page.where.not(nav_location: "Side Bar").roots.order("position")
+  end
+
+  def side_bar_navigation
+    roots = Page.where(nav_location: "Side Bar").roots.order("position")
   end
 end

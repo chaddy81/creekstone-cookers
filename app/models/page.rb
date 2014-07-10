@@ -18,4 +18,6 @@ class Page < ActiveRecord::Base
   friendly_id :title, use: [:slugged, :history]
 
   validates :title, presence: true
+
+  NAV_LOCATIONS = ["Side Bar", "Main Nav"]
 end

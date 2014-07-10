@@ -14,7 +14,18 @@
 
     - unless params[:action] == "home"
       .container
-        = yield
+        .col-md-3
+          - side_bar_navigation.each do |link|
+            %li.dropdown
+              = link_to link.title, page_path(link)
+              - if link.children.exists?
+                %span.caret
+                %ul
+                  - link.children.each do |child|
+                    %li= link_to child.title, page_path(child)
+
+        .col-md-9
+          = yield
     - else
       = yield
 

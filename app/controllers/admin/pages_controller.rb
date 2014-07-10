@@ -45,6 +45,6 @@ class Admin::PagesController < ApplicationController
   private
 
   def pages_params
-    params.require(:page).permit(:title, :content, :order, :parent_id, :position => [])
+    params.require(:page).permit(:title, :content, :order, :parent_id, :nav_location, :position => [])
   end
 end

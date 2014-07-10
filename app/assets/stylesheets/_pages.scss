@@ -10,30 +10,63 @@
 }
 
 .home-banner {
-  background: image-url('AGA_oven.jpg') top left no-repeat;
+  background: image-url('AGA_oven.jpg') center bottom no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 645px;
+  height: 445px;
   margin: -35px 0 25px;
   position: relative;
   width: 100%;
 
-  h1 {
-    font-size: 55px;
-    font-weight: 600;
+  .heading-cta {
     left: 50px;
     position: absolute;
-    top: 135px;
-  }
+    top: 105px;
 
-  h2 {
-    font-size: 45px;
-    font-weight: 600;
-    left: 50px;
-    position: absolute;
-    top: 195px;
+    h1 {
+      color: #fff;
+      font-size: 45px;
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(0,0,0,0.4);
+
+      @media (max-width: 480px) {
+        left: 0;
+        text-align: center;
+      }
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 34px;
+      font-weight: 600;
+      margin-top: 0;
+      text-shadow: 0 0 8px rgba(0,0,0,0.4);
+
+      @media (max-width: 480px) {
+        left: 0;
+        text-align: center;
+      }
+    }
+
+    .btn {
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 10px 15px;
+      text-transform: uppercase;
+
+      @media (max-width: 480px) {
+        display: inline-block;
+        margin: 20px auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      left: 0;
+      text-align: center;
+      top: 35px;
+    }
   }
 }
 
