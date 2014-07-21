@@ -15,7 +15,6 @@
 //= require jquery_ujs
 //= require jquery.ui.sortable
 //= require bootstrap.min
-//= require ckeditor/override
 //= require ckeditor/init
 //= require turbolinks
 //= require pages
