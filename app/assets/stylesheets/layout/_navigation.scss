@@ -145,6 +145,10 @@ ul.submenu {
       &:first-child {
         margin: 0;
       }
+
+      @media (max-width: 991px) {
+        margin: 0 0 0 50px;
+      }
     }
   }
 }

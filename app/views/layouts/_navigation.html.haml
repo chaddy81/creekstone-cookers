@@ -1,7 +1,7 @@
 .header
   .container
-
-    = image_tag 'logo.png', class: 'logo', width: '180', height: '67'
+    = link_to root_url do
+      = image_tag 'logo.png', class: 'logo', width: '180', height: '67'
 
     %ul.main-menu
       %li= link_to 'Home', root_url

@@ -43,6 +43,7 @@
         text-shadow: 0 0 8px rgba(0,0,0,0.4);
 
         @media (max-width: 480px) {
+          font-size: 32px;
           left: 0;
           text-align: center;
         }
@@ -56,6 +57,7 @@
         text-shadow: 0 0 8px rgba(0,0,0,0.4);
 
         @media (max-width: 480px) {
+          font-size: 21px;
           left: 0;
           text-align: center;
         }
@@ -76,7 +78,7 @@
       @media (max-width: 480px) {
         left: 0;
         text-align: center;
-        top: 35px;
+        top: 0px;
       }
     }
   }
