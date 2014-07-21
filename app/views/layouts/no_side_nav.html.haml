@@ -14,9 +14,7 @@
 
     - unless params[:action] == "home"
       .container
-        .row
-          .col-md-12
-            = yield
+        = yield
     - else
       = yield
 

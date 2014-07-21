@@ -1,28 +1,33 @@
 .header
   .container
-    %nav.navbar.navbar-default{role: "navigation"}
-      .container-fluid
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %a.navbar-brand{href: "/"}
-            / = image_tag 'logo.png', width: '150', height: '55'
-            Creekstone Cookers Inc.
 
-          %div.menu
-            .button
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
+    = image_tag 'logo.png', class: 'logo', width: '180', height: '67'
 
-            %p Menu
-
-    %ul.nav.navbar-nav.navbar-right
+    %ul.main-menu
       %li= link_to 'Home', root_url
-      - root_navigation.each do |root|
-        %li.dropdown
-          = link_to root.title, page_path(root)
-          - if root.children.exists?
-            %span.caret
-            %ul.submenu
-              - root.children.each do |child|
-                %li= link_to child.title, page_path(child)
+      %li= link_to 'About Us', page_path('about-us')
+      %li.topmenu
+        = link_to 'Buying an AGA?', page_path('how-to-buy')
+        .caret
+        %ul.submenu
+          %li= link_to 'AGA History', page_path('aga-history-timeline')
+          %li= link_to 'AGA Cookers Explained', page_path('aga-cookers-explained')
+          %li= link_to 'Reasons to Purchase an AGA', page_path('reasons-to-buy')
+          %li= link_to 'Download a Brochure', '#'
+          %li= link_to 'Current Promotions', '#'
+      %li.topmenu
+        = link_to 'View Models', page_path('models')
+        .caret
+        %ul.submenu
+          %li= link_to 'Traditional Cookers', page_path('traditional')
+          %li= link_to 'Total Control', page_path('total-control')
+      %li.topmenu
+        = link_to 'AGA Living', '#'
+        .caret
+        %ul.submenu
+          %li= link_to 'Celebrity Owners', page_path('celebrity-aga-owners')
+          %li= link_to 'Gallery', page_path('gallery')
+          %li= link_to 'Testimonials', page_path('testimonials')
+          %li= link_to 'Recipes', '#'
+
+      %li= link_to 'Contact Us', page_path('contact-us')

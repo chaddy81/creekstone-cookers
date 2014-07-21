@@ -10,13 +10,11 @@
             .pages-sortable{"data-update-url" => "#{sort_admin_pages_url}"}
               - @pages.each do |page|
                 .page-title{'data-page-id' => "#{page.id}"}
-                  %span.handle [drag]
                   = link_to page.title, edit_admin_page_path(page)
                 - unless page.children.empty?
                   %ul.page-children
                     - page.children.each do |ancestor|
                       %li.page-title.page-ancestor{'data-page-id' => "#{ancestor.id}"}
-                        %span.handle [drag]
                         = link_to ancestor.title, edit_admin_page_path(ancestor)
 
 

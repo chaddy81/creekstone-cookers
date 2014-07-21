@@ -1,7 +1,17 @@
 .footer
   .container
-    .copy.pull-left &copy; #{Time.now.year} Creekstone Cookers Inc.
-    / %ul.nav.navbar-nav.navbar-right.hidden-xs.hidden-sm
+    %hr
+
+    / %ul.nav
     /   %li= link_to 'Home', root_url
-    /   - root_navigation.each do |root|
-    /     %li= link_to root.title, page_path(root)
+    /   %li= link_to 'About Us', '#'
+    /   %li= link_to 'Buying an AGA?', '#'
+    /   %li= link_to 'View Models', '#'
+    /   %li= link_to 'AGA Living', '#'
+    /   %li= link_to 'Contact Us', '#'
+
+    / %hr
+
+    .copy.pull-left &copy; #{Time.now.year} Creekstone Cookers Inc.
+    .pull-right
+      = image_tag 'aga_logo.jpg', width: '60%'

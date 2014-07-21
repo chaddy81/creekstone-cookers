@@ -1,0 +1,20 @@
+.footer {
+  margin-top: 35px;
+  padding: 25px 0;
+  ul {
+    list-style-type: none;
+
+    li {
+      margin: 0 20px;
+
+      a {
+        color: #777;
+
+        &:hover {
+          background: none;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

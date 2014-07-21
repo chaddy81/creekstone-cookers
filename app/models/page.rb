@@ -20,4 +20,5 @@ class Page < ActiveRecord::Base
   validates :title, presence: true
 
   NAV_LOCATIONS = ["Side Bar", "Main Nav"]
+  NO_SIDE_BAR = ['four_oven_cooker_gas', 'four_oven_cooker_electric', 'two_oven_cooker_gas']
 end

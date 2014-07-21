@@ -1,21 +1,52 @@
-.home-banner
-  .heading-cta
-    %h1 Total Control Range Cooker
-    %h2 simply a better way to cook
-    .btn.btn-default View Models
+.container
+  .row
+    .home-banner.col-sm-12
+      #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+        / Indicators
+        %ol.carousel-indicators
+          %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+          %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+          %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+
+        / Wrapper for slides
+        .carousel-inner
+          .item.active
+            = image_tag 'AGA_oven.jpg'
+            .carousel-caption
+              %h1 Total Control Range Cooker
+              %h2 simply a better way to cook
+              .btn.btn-default View Models
+
+          .item
+            = image_tag 'AGA_oven.jpg'
+            .carousel-caption
+              %h1 Total Control Range Cooker
+              %h2 simply a better way to cook
+              .btn.btn-default View Models
+
+
+        / Controls
+        %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic", role: "button"}
+          %span.glyphicon.glyphicon-chevron-left
+        %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic", role: "button"}
+          %span.glyphicon.glyphicon-chevron-right
 
 .container
   .row
     .col-md-4
-      = image_tag '3-oven-aga_black_fe-roomset.jpg', class: 'img-responsive'
-      %h4 Total Control
-      = link_to 'View Models', '/pages/total-control'
-    .col-md-4
-      = image_tag '3-oven_aga-roomset.jpg', class: 'img-responsive'
-      %h4 Traditional
-      = link_to 'View Models', '/pages/traditional'
-    .col-md-4
-      %p Welcome to the Creekstone Cookers Web site! Creekstone Cookers is the southeast's premiere dealer of Aga ranges, cookware, and related products. In our site, you'll find information about our company, upcoming events sponsored by Creekstone Cookers, and information about the products we carry as well as the advantages of owning an Aga range.
+      .col-md-12
+        = image_tag '3-oven-aga_black_fe-roomset.jpg', class: 'img-responsive'
+        %h4 Total Control
+        = link_to 'View Models', '/pages/total-control'
+        %br
+        %br
+      .col-md-12
+        = image_tag '3-oven_aga-roomset.jpg', class: 'img-responsive'
+        %h4 Traditional
+        = link_to 'View Models', '/pages/traditional'
+    .col-md-8
+      %h2 Welcome to the Creekstone Cookers Web site!
+      %p Creekstone Cookers is the southeast's premiere dealer of Aga ranges, cookware, and related products. In our site, you'll find information about our company, upcoming events sponsored by Creekstone Cookers, and information about the products we carry as well as the advantages of owning an Aga range.
 
       %p We, at Creekstone Cookers, appreciate your interest in Aga and value your business. Therefore we will strive to make this a most enjoyable an rewarding experience and exceed your expectations. We look forward to welcoming you into the Aga family.
 

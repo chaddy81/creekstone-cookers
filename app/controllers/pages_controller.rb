@@ -24,6 +24,9 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.friendly.find(params[:id])
+    if Page::NO_SIDE_BAR.include?(@page.title)
+      render layout: 'no_side_nav'
+    end
 
     if request.path != page_path(@page)
       redirect_to @page, status: :moved_permanently
@@ -46,6 +49,14 @@ class PagesController < ApplicationController
   def update_image
     @image = params[:image]
     @type = params[:type]
+  end
+
+  def four_oven_cooker_electric
+    render layout: 'no_side_nav'
+  end
+
+  def four_oven_cooker_gas
+    render layout: 'no_side_nav'
   end
 
   private
