@@ -113,6 +113,22 @@
   font-style: italic;
 }
 
+.cooker {
+  margin-bottom: 25px;
+  text-align: center;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.gallery {
+  a {
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 992px) {
   .nav-tabs {
     border: none;

@@ -1,6 +1,22 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 
+# OVERLAY
+overlayOn = ->
+  $( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' )
+overlayOff = ->
+  $( '#imagelightbox-overlay' ).remove()
+
+# CLOSE BUTTON
+
+closeButtonOn = (instance)->
+  $("<button type=\"button\" id=\"imagelightbox-close\" title=\"Close\"></button>").appendTo("body").on "click touchend", ->
+    $(this).remove()
+    instance.quitImageLightbox()
+    false
+closeButtonOff = ->
+  $( '#imagelightbox-close' ).remove()
+
 $ ->
   $('.panel-body .page-title a').click (e)->
     e.preventDefault()
@@ -13,22 +29,62 @@ $ ->
   $('.menu').on 'click', ->
     $('.navbar-nav').toggleClass('open')
 
-  $('.four_oven_gas .color-chip').on 'click', (e) ->
+  lightbox = $('a[data-imagelightbox="a"]').imageLightbox
+    quitOnDocClick: false
+    onStart: ->
+      overlayOn()
+      closeButtonOn( lightbox )
+    onEnd: ->
+      overlayOff()
+      closeButtonOff()
+
+  $('.four_oven .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
     lastClass = $(this).attr('class').split(' ').pop()
     imageName = lastClass.split('-').pop()
-    folder = $(this).parent().attr('class').split(' ')[0]
+    folder = $(this).parent().parent().attr('class').split(' ')[0]
     image = folder + '/4oven_cont_' + imageName + '.jpg'
     $.ajax
       data: {'image': image},
       type: 'POST',
       url: '/pages/update_image'
 
-  $('.four_oven_electric .color-chip').on 'click', (e) ->
+    $(this).addClass('active')
+
+  $('.three_oven .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
     lastClass = $(this).attr('class').split(' ').pop()
     imageName = lastClass.split('-').pop()
-    folder = $(this).parent().attr('class').split(' ')[0]
-    image = folder + '/4-oven-30-amp-aga_-' + imageName + '.png'
+    folder = $(this).parent().parent().attr('class').split(' ')[0]
+    image = folder + '/3oven_' + imageName + '.jpg'
     $.ajax
       data: {'image': image},
       type: 'POST',
       url: '/pages/update_image'
+
+    $(this).addClass('active')
+
+  $('.two_oven .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
+    lastClass = $(this).attr('class').split(' ').pop()
+    imageName = lastClass.split('-').pop()
+    folder = $(this).parent().parent().attr('class').split(' ')[0]
+    image = folder + '/2oven_' + imageName + '.jpg'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'
+
+    $(this).addClass('active')
+
+  # $('.four_oven_electric .color-chip').on 'click', (e) ->
+  #   lastClass = $(this).attr('class').split(' ').pop()
+  #   imageName = lastClass.split('-').pop()
+  #   folder = $(this).parent().attr('class').split(' ')[0]
+  #   image = folder + '/4-oven-30-amp-aga_-' + imageName + '.png'
+  #   $.ajax
+  #     data: {'image': image},
+  #     type: 'POST',
+  #     url: '/pages/update_image'
+
+  $('.color-chip').tooltip()

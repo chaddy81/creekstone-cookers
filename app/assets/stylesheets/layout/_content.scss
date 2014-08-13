@@ -1,3 +1,7 @@
 body, p {
   color: #484848;
 }
+
+.clearfix {
+  @include clearfix;
+}

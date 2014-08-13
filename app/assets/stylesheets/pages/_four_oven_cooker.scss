@@ -15,8 +15,10 @@
 }
 
 .color-chip {
-  display: inline-block;
+  border: 1px solid #f0f0f0;
+  float: left;
   height: 35px;
+  margin-right: 4px;
   width: 35px;
 
   &.four-oven-black {
@@ -67,4 +69,34 @@
     background: #B9CEE1;
   }
 
+  &.active {
+    border: 3px solid #bbb;
+  }
+
+}
+
+.electric {
+  margin-left: 20px;
+
+  &:before {
+    background: image-url('electric.png') top left no-repeat;
+    background-size: 100%;
+    content: '';
+    display: inline-block;
+    height: 18px;
+    vertical-align: text-bottom;
+    width: 18px;
+  }
+}
+
+.gas {
+  &:before {
+    background: image-url('gas.png') top left no-repeat;
+    background-size: 100%;
+    content: '';
+    display: inline-block;
+    height: 18px;
+    vertical-align: text-bottom;
+    width: 18px;
+  }
 }
