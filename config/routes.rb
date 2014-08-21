@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post '/pages/update_image'
 
   resources :pages
+  match '/contacts', to: 'contacts#new', via: 'get'
+  resources :contacts, only: [:new, :create]
 
   namespace :admin do
     resources :pages, only: [:index, :new, :create, :edit, :destroy, :update] do

@@ -14,7 +14,7 @@ module ApplicationHelper
         puts "alert-block"
       when :error
         puts "alert-error"
-      when "notice"
+      when :notice
         puts "alert-info"
       when :success
         puts "alert-success"

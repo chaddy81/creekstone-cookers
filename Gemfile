@@ -21,6 +21,7 @@ gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor.git'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'ancestry'
+gem 'mail_form'
 
 gem 'annotate', ">=2.6.0"
 gem 'rails_12factor'
@@ -35,6 +36,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'debugger'
   gem 'shoulda-matchers'
+  gem 'letter_opener'
 end
 
 gem 'spring', group: :development
