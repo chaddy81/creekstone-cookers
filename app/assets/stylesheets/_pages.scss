@@ -129,6 +129,15 @@
   }
 }
 
+.cooking-methods {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+
+  &:last-child {
+    border: none;
+  }
+}
+
 @media (max-width: 992px) {
   .nav-tabs {
     border: none;
