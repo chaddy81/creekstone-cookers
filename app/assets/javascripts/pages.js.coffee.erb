@@ -77,6 +77,19 @@ $ ->
 
     $(this).addClass('active')
 
+  $('.city_sixty_traditional .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
+    lastClass = $(this).attr('class').split(' ').pop()
+    imageName = lastClass.split('-').pop()
+    folder = $(this).parent().parent().attr('class').split(' ')[0]
+    image = folder + '/city_trad_' + imageName + '.jpg'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'
+
+    $(this).addClass('active')
+
   # $('.four_oven_electric .color-chip').on 'click', (e) ->
   #   lastClass = $(this).attr('class').split(' ').pop()
   #   imageName = lastClass.split('-').pop()

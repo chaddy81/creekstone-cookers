@@ -59,6 +59,10 @@ class PagesController < ApplicationController
     render layout: 'no_side_nav'
   end
 
+  def city_sixty_traditional
+    render layout: 'no_side_nav'
+  end
+
   private
 
   def pages_params

@@ -6,7 +6,7 @@
   }
 }
 
-[class^='four_oven'] {
+[class^='four_oven'], [class^='city60'] {
   margin-bottom: 35px;
 
   h2 {
@@ -66,6 +66,49 @@
   }
 
   &.four-oven-duckegg {
+    background: #B9CEE1;
+  }
+
+  &.city60-rose{
+    background: #E6CAD9;
+  }
+  &.city60-lemon{
+    background: #F7EDB2;
+  }
+  &.city60-black{
+    background: #000;
+  }
+  &.city60-cream{
+    background: #FFF6D5;
+  }
+  &.city60-pewter{
+    background: #50505A;
+  }
+  &.city60-darkblue{
+    background: #2E3375;
+  }
+  &.city60-green{
+    background: #376630;
+  }
+  &.city60-pistachio{
+    background: #99CEC4;
+  }
+  &.city60-aqua{
+    background: #B1CBBE;
+  }
+  &.city60-heather{
+    background: #9886A0;
+  }
+  &.city60-aubergine{
+    background: #612561;
+  }
+  &.city60-pearl{
+    background: #E0DEE3;
+  }
+  &.city60-white{
+    background: #F8F8F8;
+  }
+  &.city60-duckegg{
     background: #B9CEE1;
   }
 
