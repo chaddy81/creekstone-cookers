@@ -27,6 +27,8 @@ gem 'annotate', ">=2.6.0"
 gem 'rails_12factor'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara'

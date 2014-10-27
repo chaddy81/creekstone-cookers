@@ -1,0 +1,121 @@
+.city_sixty_traditional.col-sm-12.col-md-6
+  %h2 City60 AGA Cooker
+  %h4 Cast-iron range cooker
+
+  .image-container
+    = image_tag 'city_sixty_traditional/city_trad_rose.jpg', class: 'img-responsive'
+  .col-sm-12.clearfix
+    %h4 Colors
+    .color-chip.city60-rose.active{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Rose"}
+    .color-chip.city60-lemon{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Lemon"}
+    .color-chip.city60-black{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Black"}
+    .color-chip.city60-cream{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Cream"}
+    .color-chip.city60-pewter{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Pewter"}
+    .color-chip.city60-darkblue{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Dark Blue"}
+    .color-chip.city60-green{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "British Racing Green"}
+    .color-chip.city60-pistachio{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Pistachio"}
+    .color-chip.city60-aqua{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Aqua"}
+    .color-chip.city60-heather{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Heather"}
+    .color-chip.city60-aubergine{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Aubergine"}
+    .color-chip.city60-pearl{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Pearl"}
+    .color-chip.city60-white{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "White"}
+    .color-chip.city60-duckegg{ 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Duck Egg Blue"}
+
+    %br
+    %br
+
+  .col-sm-12.clearfix
+    %h4 Fuel Types
+    %i.electric{style:'margin-left: 0'} Electric
+
+    %br
+    %br
+
+
+  .col-sm-12.gallery.clearfix
+    = link_to '/assets/60cm-roomset-1_866x428.jpg', 'data-imagelightbox' => "a", class: 'col-sm-3 thumbnail' do
+      = image_tag '60cm-roomset-1_866x428.jpg'
+
+    = link_to '/assets/60cm-roomset-2_866x428.jpg', 'data-imagelightbox' => "a", class: 'col-sm-3 thumbnail' do
+      = image_tag '60cm-roomset-2_866x428.jpg'
+
+.col-sm-12.col-md-6
+
+  %p The AGA City60 couldn't be easier to use. With one control knob for the hotplates and another for the ovens, the cooker has been designed with simplicity in mind. The AGA City60's roasting/baking oven can be programmed and can have up to three events programmed per day*. They operate using a timer similar to that used for controlling a central heating programmer. This means the ovens can be timed to come on and ready to cook when you are.
+  %small *Using the optional extra AGA City60 Programmer.
+
+  %ul.nav.nav-tabs{role: "tablist"}
+    %li.active
+      %a{href: "#features", role: "tab", "data-toggle" => "tab"} Features
+    %li
+      %a{href: "#technical", role: "tab", "data-toggle" => "tab"} Specs
+    %li
+      %a{href: "#manuals", role: "tab", "data-toggle" => "tab"} Literature
+    %li
+      %a{href: "#accessories", role: "tab", "data-toggle" => "tab"} Accessories
+    %li
+      %a{href: "#contact", role: "tab", "data-toggle" => "tab"} Contact
+
+  .tab-content
+    .tab-pane.active#features
+      %p The classic 4-oven AGA Cooker is the flagship of the AGA line. Based on a proven design of more than 80 years, the 4-oven AGA provides a truly unique and rewarding cooking experience. With 4 radiant-heat ovens, two hotplates and a warming plate this AGA has unmatched flexibility and cooking capabilities.
+
+      = render 'features'
+
+    .tab-pane#technical
+      %h3 FOUR OVEN COOKER - GAS MODEL: SPECIFICATIONS
+      .table-responsive
+        %table.table
+          %tr
+            %td
+              %strong DIMENSIONS
+            %td 35"H × 24 1/2"D × 24"W
+          %tr
+            %td
+              %strong NOTE
+            %td Do not use the above specifications for kitchen design or installation. Please consult our design guide for detailed rough-in and specification information.
+          %tr
+            %td
+              %strong MATERIALS
+            %td Durable cast iron covered by three coats of vitreous enamel in one of 12 colors.
+          %tr
+            %td
+              %strong MAINTENANCE
+            %td An annnual and 10-year preventative maintainence are recommended.
+          %tr
+            %td
+              %strong INSTALLATION
+            %td Must be installed by a certified AGA fitter. Please note that using anyone other than a certified Aga fitter will void the product warranty.
+          %tr
+            %td
+              %strong WEIGHT
+            %td 492 lbs
+          %tr
+            %td
+              %strong VENTING OPTIONS
+            %td In room venting flue - electric
+          %tr
+            %td
+              %strong FUEL OPTIONS
+            %td Electric
+          %tr
+            %td
+              %strong WARRANTY
+            %td 5 years limited, parts and labour
+
+    .tab-pane#manuals
+      %p
+        %a{href: "http://www.aga-ranges.com/media/185886/brochure_cooker_en.pdf", target: 'blank'} AGA Cooker Brochure
+      %p
+        %a{href: "http://www.aga-ranges.com/media/236667/misc_aga_total_control_how_aga_cooker_became_an_icon.pdf", target: 'blank'} How the AGA Cooker Became an Icon
+      %p
+        %a{href: "http://www.aga-ranges.com/media/236997/user_instructions_cooker_2_and_4_oven_gas.pdf", target: 'blank'} User and Care Guide
+      %p
+        %a{href: "http://www.aga-ranges.com/media/193152/installation_guide_cooker_2_and_4_oven_gas.pdf", target: 'blank'} Installation Instructions
+      %p
+        %a{href: "http://www.aga-ranges.com/media/237000/installation_guide_cooker_vent.pdf", target: 'blank'} Vent Installation Instructions
+      %p
+        %a{href: "http://www.aga-ranges.com/media/237039/misc_aga_design_guide.pdf", target: 'blank'} Design Guide
+
+    .tab-pane#accessories
+    .tab-pane#contact
