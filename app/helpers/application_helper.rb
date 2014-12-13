@@ -10,14 +10,14 @@ module ApplicationHelper
 
   def twitterized_type(type)
     case type
-      when :alert
-        puts "alert-block"
-      when :error
-        puts "alert-error"
-      when :notice
-        puts "alert-info"
-      when :success
-        puts "alert-success"
+      when "alert"
+        "alert-block"
+      when "error"
+        "alert-error"
+      when "notice"
+        "alert-info"
+      when "success"
+        "alert-success"
       else
         type.to_s
     end
@@ -29,5 +29,9 @@ module ApplicationHelper
 
   def side_bar_navigation
     roots = Page.where(nav_location: "Side Bar").roots.order("position")
+  end
+
+  def admin_pages
+    Page.roots.order("position")
   end
 end

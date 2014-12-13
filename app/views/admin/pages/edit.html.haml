@@ -1,14 +1,33 @@
-%h2 Edit Page
+.row
+  .col-xs-12.col-md-3
+    = render 'side_nav'
 
-%h5= link_to 'View Page', page_path(@page)
-%h5= link_to 'Delete Page', admin_page_path(@page), method: 'delete'
+  .col-xs-12.col-md-9
+    #page-content
+      %h2 Edit Page
 
-= simple_form_for @page, :url => url_for(:action => 'update', :controller => 'pages'), html: { role: 'form' } do |f|
-  .form-group
-    = f.input :title, placeholder: 'Page Title', input_html: { style: 'width: 100%' }
-    = f.input :content, :as => :ckeditor, input_html: { :ckeditor => {:toolbar => 'Full'} }
-    = f.label :parent_id
-    = f.collection_select :parent_id, Page.order(:title), :id, :title, include_blank: true
-    = f.input :nav_location, collection: Page::NAV_LOCATIONS
+      = link_to page_path(@page), class: 'btn btn-default btn-sm' do
+        %span.glyphicon.glyphicon-ok-sign
+        View Page
 
-    = f.submit
+      = link_to admin_page_path(@page), class: 'btn btn-danger btn-sm', method: 'delete' do
+        %span.glyphicon.glyphicon-remove
+        Delete Page
+
+
+      = simple_form_for @page, :url => url_for(:action => 'update', :controller => 'pages'), html: { role: 'form', style: 'margin-top: 15px;' } do |f|
+        .form-group
+          = f.input :title, placeholder: 'Page Title', input_html: { style: 'width: 100%' }
+
+        .form-group
+          = f.input :content, :as => :ckeditor, input_html: { :ckeditor => {:toolbar => 'Full'} }
+
+        .form-group
+          = f.label :parent_id
+          = f.collection_select :parent_id, Page.order(:title), :id, :title, include_blank: true
+
+        .form-group
+          = f.input :nav_location, collection: Page::NAV_LOCATIONS
+
+        .form-group
+          = f.submit "Update Page", class: 'btn btn-default'

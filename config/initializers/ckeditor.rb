@@ -6,9 +6,6 @@ Ckeditor.setup do |config|
   # available as additional gems.
   require "ckeditor/orm/active_record"
 
-  config.assets_languages =  [ 'en']
-  config.assets_plugins = [ 'dialog', 'filebrowser']
-
   # Allowed image file types for upload.
   # Set to nil or [] (empty array) for all file types
   # By default: %w(jpg jpeg png gif tiff)
@@ -34,4 +31,9 @@ Ckeditor.setup do |config|
   # Customize ckeditor assets path
   # By default: nil
   # config.asset_path = "http://www.example.com/assets/ckeditor/"
+
+  # To reduce the asset precompilation time, you can limit plugins and/or languages to those you need:
+  # By default: nil (no limit)
+  # config.assets_languages = ['en', 'uk']
+  # config.assets_plugins = ['image', 'smiley']
 end

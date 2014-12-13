@@ -1,32 +1,33 @@
 class Admin::PagesController < ApplicationController
-  layout 'admin', only: [:index]
+  layout 'admin'
+
+  before_filter :authenticate
 
   def index
-    @pages = Page.roots.order("position")
   end
 
   def new
     @page = Page.new
-    render layout: false
   end
 
   def edit
     @page = Page.friendly.find(params[:id])
-    render layout: false
   end
 
   def create
     @page = Page.new(pages_params)
     if @page.save
-      redirect_to page_path(@page), notice: 'Page created successfully'
+      flash[:success] = 'Page created successfully'
+      redirect_to edit_admin_page_path(@page)
     else
       render :new
     end
   end
 
   def destroy
-    Page.find(params[:id]).destroy
-    redirect_to admin_pages_path, notice: 'Page Successfully destroyed'
+    Page.friendly.find(params[:id]).destroy
+    flash[:success] = 'Page Successfully destroyed'
+    redirect_to admin_pages_path
   end
 
   def sort
@@ -38,6 +39,9 @@ class Admin::PagesController < ApplicationController
 
   def update
     page = Page.friendly.find(params[:id])
+    if page.title != pages_params[:title]
+      page.slug = nil
+    end
     page.update!(pages_params)
     redirect_to page_path(page)
   end

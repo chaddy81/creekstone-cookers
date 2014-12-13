@@ -23,5 +23,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/admin", :to => redirect("/admin/pages")
+
   root to: "pages#home"
 end

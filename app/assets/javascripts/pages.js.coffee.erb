@@ -18,13 +18,13 @@ closeButtonOff = ->
   $( '#imagelightbox-close' ).remove()
 
 $ ->
-  $('.panel-body .page-title a').click (e)->
-    e.preventDefault()
-    $("#page-content").load $(this).attr('href')
+  # $('.panel-body .page-title a').click (e)->
+  #   e.preventDefault()
+  #   $("#page-content").load $(this).attr('href')
 
-  $('.page-new a').click (e)->
-    e.preventDefault()
-    $("#page-content").load $(this).attr('href')
+  # $('.page-new a').click (e)->
+  #   e.preventDefault()
+  #   $("#page-content").load $(this).attr('href')
 
   $('.menu').on 'click', ->
     $('.navbar-nav').toggleClass('open')
@@ -83,6 +83,32 @@ $ ->
     imageName = lastClass.split('-').pop()
     folder = $(this).parent().parent().attr('class').split(' ')[0]
     image = folder + '/city_trad_' + imageName + '.jpg'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'
+
+    $(this).addClass('active')
+
+  $('.tc-3 .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
+    lastClass = $(this).attr('class').split(' ').pop()
+    imageName = lastClass.split('-').pop()
+    folder = "total_control_3"
+    image = folder + '/tc-3-' + imageName + '.jpg'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'
+
+    $(this).addClass('active')
+
+  $('.tc-5 .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
+    lastClass = $(this).attr('class').split(' ').pop()
+    imageName = lastClass.split('-').pop()
+    folder = "total_control_5"
+    image = folder + '/tc-5-' + imageName + '.jpg'
     $.ajax
       data: {'image': image},
       type: 'POST',

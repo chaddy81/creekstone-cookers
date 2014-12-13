@@ -1,35 +1,10 @@
 .row
   .col-xs-12.col-md-3
-    .panel-group#accordion
-      .panel.panel-default
-        .panel-heading
-          %h4.panel-title
-            %a{'data-toggle' => "collapse", 'data-parent' => "#accordion", href: "#collapseOne"} Pages
-        .panel-collapse.collapse.in#collapseOne
-          .panel-body
-            .pages-sortable{"data-update-url" => "#{sort_admin_pages_url}"}
-              - @pages.each do |page|
-                .page-title{'data-page-id' => "#{page.id}"}
-                  = link_to page.title, edit_admin_page_path(page)
-                - unless page.children.empty?
-                  %ul.page-children
-                    - page.children.each do |ancestor|
-                      %li.page-title.page-ancestor{'data-page-id' => "#{ancestor.id}"}
-                        = link_to ancestor.title, edit_admin_page_path(ancestor)
-
-
-            .page-new= link_to "New Page...", new_admin_page_path
-
-      .panel.panel-default
-        .panel-heading
-          %h4.panel-title
-            %a{'data-toggle' => "collapse", 'data-parent' => "#accordion", href: "#collapseTwo"} Events
-        .panel-collapse.collapse#collapseTwo
-          .panel-body
-            Events Coming Soon
+    = render 'side_nav'
 
   .col-xs-12.col-md-9
     #page-content
+      %h1 Welcome to Creekstone Cookers Dashboard
 
 :coffee
   $ ->
