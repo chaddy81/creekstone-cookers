@@ -86,8 +86,8 @@ Rails.application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'creekstonecookers.herokuapp.com',
-    :user_name            => 'chad.bartels@gmail.com',
-    :password             => 'Porous2010',
+    :user_name            => ENV['CC_EMAIL'],
+    :password             => ENV['CC_EMAIL_PASSWORD'],
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 end
