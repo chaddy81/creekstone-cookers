@@ -100,6 +100,7 @@ ul.submenu {
     width: 100%;
 
     a {
+      cursor: pointer !important;
       height: auto !important;
       line-height: 1 !important;
       margin: 0 !important;
@@ -111,6 +112,10 @@ ul.submenu {
 .topmenu {
   position: relative;
   z-index: 200;
+
+  a:first-child {
+    cursor: default;
+  }
 
   &:hover {
     .submenu {
