@@ -129,6 +129,32 @@ $ ->
 
     $(this).addClass('active')
 
+  $('.dual-control-3 .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
+    lastClass = $(this).attr('class').split(' ').pop()
+    imageName = lastClass.split('-').pop()
+    folder = "dual_control_3"
+    image = folder + '/dc3-' + imageName + '.jpg'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'
+
+    $(this).addClass('active')
+
+  $('.dual-control-5 .color-chip').on 'click', (e) ->
+    $('.color-chip').removeClass('active')
+    lastClass = $(this).attr('class').split(' ').pop()
+    imageName = lastClass.split('-').pop()
+    folder = "dual_control_5"
+    image = folder + '/dc5-' + imageName + '.jpg'
+    $.ajax
+      data: {'image': image},
+      type: 'POST',
+      url: '/pages/update_image'
+
+    $(this).addClass('active')
+
   # $('.four_oven_electric .color-chip').on 'click', (e) ->
   #   lastClass = $(this).attr('class').split(' ').pop()
   #   imageName = lastClass.split('-').pop()
