@@ -16,7 +16,7 @@
 //= require jquery-ui
 //= require bootstrap.min
 //= require turbolinks
-//= require pages
 //= require imagelightbox
+//= require pages
 //= require ckeditor/init
 //= require_tree .
