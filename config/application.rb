@@ -29,6 +29,7 @@ module Creekstone
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.enabled = true
+    config.assets.paths << Rails.root.join('app', 'assets', 'javascripts','ckeditor')
     config.assets.precompile += Ckeditor.assets
     config.assets.precompile += ['*ckeditor/skins/moono/icons.png']
     config.assets.precompile += ['*ckeditor/config.js']
