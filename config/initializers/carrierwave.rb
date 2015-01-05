@@ -5,6 +5,6 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV['S3_SECRET'],                       # required
   }
   config.fog_directory  = 'creekstone-cookers'                         # required
-  config.fog_public     = false                                        # optional, defaults to true
+  config.fog_public     = true                                        # optional, defaults to true
   config.fog_attributes = {'Cache-Control'=>"max-age=#{365.day.to_i}"} # optional, defaults to {}
 end
