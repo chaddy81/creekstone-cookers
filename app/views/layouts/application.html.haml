@@ -6,6 +6,8 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    - if request.env['HTTP_HOST'] == 'www.creekstonecookers.com'
+      = render 'layouts/analytics'
 
   %body
 
