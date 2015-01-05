@@ -17,7 +17,17 @@ closeButtonOn = (instance)->
 closeButtonOff = ->
   $( '#imagelightbox-close' ).remove()
 
+lightbox = $('a[data-imagelightbox="a"]').imageLightbox
+  quitOnDocClick: false
+  onStart: ->
+    overlayOn()
+    closeButtonOn( lightbox )
+  onEnd: ->
+    overlayOff()
+    closeButtonOff()
+
 $ ->
+  'use strict';
   # $('.panel-body .page-title a').click (e)->
   #   e.preventDefault()
   #   $("#page-content").load $(this).attr('href')
@@ -28,15 +38,6 @@ $ ->
 
   $('.menu').on 'click', ->
     $('.navbar-nav').toggleClass('open')
-
-  lightbox = $('a[data-imagelightbox="a"]').imageLightbox
-    quitOnDocClick: false
-    onStart: ->
-      overlayOn()
-      closeButtonOn( lightbox )
-    onEnd: ->
-      overlayOff()
-      closeButtonOff()
 
   $('.four_oven .color-chip').on 'click', (e) ->
     $('.color-chip').removeClass('active')
