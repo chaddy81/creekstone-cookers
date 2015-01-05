@@ -18,5 +18,4 @@
 //= require turbolinks
 //= require pages
 //= require imagelightbox
-//= require ./ckeditor
 //= require_tree .
