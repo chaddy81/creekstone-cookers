@@ -4,6 +4,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :get_nav
 
+  APP_DOMAIN = 'www.creekstonecookers.com'
+
+  def ensure_domain
+    if request.env['HTTP_HOST'] != APP_DOMAIN
+      puts request.fullpath
+      # HTTP 301 is a "permanent" redirect
+      redirect_to "http://#{APP_DOMAIN}#{request.fullpath}", :status => 301
+    end
+  end
+
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
       username == "creekstone" && password == "Cr33kst0n3!"
